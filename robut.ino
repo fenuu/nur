@@ -19,6 +19,7 @@ void setup() {
   Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
   Servo1.attach(servoPin); 
   Servo1.write(0);
+  delay(2000);
   
   
 }
@@ -28,10 +29,10 @@ void loop() {
   int minu=200;
   int deg;
   int i;
-  Servo1.write(0);
-  delay(2000);
-                     // Make servo go to 0 degrees 
-   Servo1.write(180);
+  
+  Servo1.write(0); 
+  Servo1.write(180);
+  
     for(int i=0;i<=180;i+=9) 
       {
         delay(20);
